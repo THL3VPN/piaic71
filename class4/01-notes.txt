@@ -1,1 +1,0 @@
-if age.isdigit():                   #isdigit is a function which returns TRUE if the variable has only digit
