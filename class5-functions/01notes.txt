@@ -1,3 +1,0 @@
-#in a function we can pass the arguemt as parameter/keyword arguemnents
-#in a function we can pass the arguemt as positional arguemnents
-
