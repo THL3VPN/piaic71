@@ -7,6 +7,3 @@ def llm (prompt:str):
 response_dictionary = llm(prompt = "Hi")
 
 print(response_dictionary["content"])
-
-
-#google piaic71 project johntmoy13
