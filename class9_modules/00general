@@ -1,0 +1,16 @@
+1. modules
+    -- ek bari file to choti files mai break krdena
+    -- aur choti files reuse krlena
+        --- in fles mai hnge functions wo sb ek file mai grouped honge
+    -- from 1 import login.py
+    -- from <location> import <file_name>
+
+2. colorama
+    -- for color in our code
+
+3. read and write
+    -- write se file puri new banagi
+        --- sari cheezen del krdega
+    -- append se file mai data add hoga
+    -- read ka function cursor k age se read krega
+
