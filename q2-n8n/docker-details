@@ -1,0 +1,11 @@
+hello
+
+
+docker volume create n8n_data
+  
+docker run -it  --name n8n  -p 5678:5678  -e GENERIC_TIMEZONE="Asia/Karachi"  -e TZ="Asia/Karachi"  -e N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true  -e N8N_RUNNERS_ENABLED=true  -e N8N_SECURE_COOKIE=false -e N8N_HOST=172.25.161.30  -v n8n_data:/home/node/.n8n  docker.n8n.io/n8nio/n8n
+
+sudo usermod -aG docker ${USER}
+exec sg docker newgrp
+sudo usermod -aG docker aie  
+  
