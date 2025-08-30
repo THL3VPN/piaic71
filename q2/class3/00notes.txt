@@ -1,0 +1,4 @@
+https://github.com/panaversity/learn-agentic-ai/tree/main/01_ai_agents_first/01_uv
+https://docs.astral.sh/uv/#highlights
+
+uv init project1 //this will make all the files in a folder project1
