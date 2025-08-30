@@ -1,0 +1,42 @@
+services:
+  n8n:
+    image: n8nio/n8n
+    restart: always
+    ports:
+      - "5678:5678"
+    environment:
+      - DB_SQLITE_POOL_SIZE=1
+      - N8N_RUNNERS_ENABLED=true
+      - N8N_HOST="sturdy-lamp-9rx4j99x97wfxwgx-2080.app.github.dev"
+      #- N8N_PORT="5678"
+      - VUE_APP_URL_BASE_API="https://sturdy-lamp-9rx4j99x97wfxwgx-2080.app.github.dev/"
+      - WEBHOOK_TUNNEL_URL="https://sturdy-lamp-9rx4j99x97wfxwgx-2080.app.github.dev/"
+      - WEBHOOK_URL="https://sturdy-lamp-9rx4j99x97wfxwgx-2080.app.github.dev/"
+    volumes:
+      - /var/lib/docker/volumes/n8n_data/_data:/home/node/.n8n
+
+  nginx:
+    image: nginx
+    restart: always
+    ports:
+      - "2080:2080"
+    volumes:
+      - /var/lib/docker/volumes/nginx_data/_data:/etc/nginx/conf.d/
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+      ME_CONFIG_BASICAUTH_ENABLED: true
+      ME_CONFIG_BASICAUTH_USERNAME: mongoexpressuser
+      ME_CONFIG_BASICAUTH_PASSWORD: mongoexpresspass
