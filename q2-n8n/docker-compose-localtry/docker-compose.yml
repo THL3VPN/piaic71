@@ -1,27 +1,49 @@
+
+
+
+networks:
+  n8n_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+volumes:
+  n8n_data:
+  nginx_data:
+  mongodb_data:
+
+
 services:
   n8n:
     image: n8nio/n8n
     restart: always
-    ports:
-      - "5678:5678"
+    # ports:
+    #   - "5678:5678"
     environment:
       - DB_SQLITE_POOL_SIZE=1
       - N8N_RUNNERS_ENABLED=true
-      - N8N_HOST="sturdy-lamp-9rx4j99x97wfxwgx-2080.app.github.dev"
-      #- N8N_PORT="5678"
-      - VUE_APP_URL_BASE_API="https://sturdy-lamp-9rx4j99x97wfxwgx-2080.app.github.dev/"
-      - WEBHOOK_TUNNEL_URL="https://sturdy-lamp-9rx4j99x97wfxwgx-2080.app.github.dev/"
-      - WEBHOOK_URL="https://sturdy-lamp-9rx4j99x97wfxwgx-2080.app.github.dev/"
+      - N8N_HOST="466klp9b-5678.usw3.devtunnels.ms"
+      - VUE_APP_URL_BASE_API="https://466klp9b-8080.usw3.devtunnels.ms/"
+      - WEBHOOK_TUNNEL_URL="https://466klp9b-8080.usw3.devtunnels.ms/"
+      - WEBHOOK_URL="https://466klp9b-8080.usw3.devtunnels.ms/"
     volumes:
-      - /var/lib/docker/volumes/n8n_data/_data:/home/node/.n8n
+      - n8n_data:/home/node/.n8n
+    networks:
+      n8n_network:
+        ipv4_address: 172.20.0.10
+    
 
   nginx:
     image: nginx
     restart: always
     ports:
-      - "2080:2080"
+      - "8080:8080"
     volumes:
-      - /var/lib/docker/volumes/nginx_data/_data:/etc/nginx/conf.d/
+      - nginx_data:/etc/nginx/conf.d/
+    networks:
+      n8n_network:
+        ipv4_address: 172.20.0.20
 
   mongo:
     image: mongo
@@ -29,6 +51,11 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      n8n_network:
+        ipv4_address: 172.20.0.30
 
   mongo-express:
     image: mongo-express
@@ -37,6 +64,9 @@ services:
       - 8081:8081
     environment:
       ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
-      ME_CONFIG_BASICAUTH_ENABLED: true
+      ME_CONFIG_BASICAUTH_ENABLED: "true"
       ME_CONFIG_BASICAUTH_USERNAME: mongoexpressuser
       ME_CONFIG_BASICAUTH_PASSWORD: mongoexpresspass
+    networks:
+      n8n_network:
+        ipv4_address: 172.20.0.40
