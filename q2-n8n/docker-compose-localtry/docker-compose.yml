@@ -25,6 +25,8 @@ services:
       - VUE_APP_URL_BASE_API="https://${N8N_HOST}/"
       - WEBHOOK_TUNNEL_URL="https://${N8N_HOST}/"
       - WEBHOOK_URL="https://${N8N_HOST}/"
+      - GENERIC_TIMEZONE="Asia/Karachi"
+      - TZ="Asia/Karachi"
     volumes:
       - n8n_data:/home/node/.n8n
     networks:
