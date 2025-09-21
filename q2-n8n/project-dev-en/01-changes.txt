@@ -1,0 +1,13 @@
+Project Change Log
+
+1. Initialized project repository.
+2. Set up basic folder structure.
+3. Added initial README file.
+4. Implemented core functionality.
+5. Fixed bugs identified during testing.
+6. Updated documentation.
+7. Finalized project for release.
+8. Improved frontend form alignment, spacing, and borders for a visually balanced look.
+9. Changed department field to a dropdown menu with predefined departments.
+10. Created SQLite database and table for storing LSI incident records.
+11. Linked Flask backend to static frontend HTML file for live updates on form changes.

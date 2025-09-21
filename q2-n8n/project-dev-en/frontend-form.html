@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LSI Submission Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .form-container {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+      padding: 2.5rem 2.2rem;
+      max-width: 440px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      border: 1.5px solid #e5e7eb;
+    }
+    h2 {
+      text-align: center;
+      color: #2d3e50;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    label {
+      color: #34495e;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 0.1rem;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1.5px solid #dbeafe;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #f8fafc;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      box-sizing: border-box;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: #2563eb;
+      background: #fff;
+      box-shadow: 0 0 0 2px #60a5fa33;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+      max-height: 200px;
+    }
+    button {
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(90deg, #60a5fa 0%, #2563eb 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+      transition: background 0.2s, box-shadow 0.2s;
+      margin-top: 0.5rem;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+      box-shadow: 0 4px 16px rgba(44, 62, 80, 0.15);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>LSI Submission Form</h2>
+    <form method="POST" action="/">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="department">Department</label>
+        <select id="department" name="department" required>
+          <option value="" disabled selected>Select your department</option>
+          <option value="sales">Sales</option>
+          <option value="marketing">Marketing</option>
+          <option value="engineering">Engineering</option>
+          <option value="audit">Audit</option>
+          <option value="information-technology">Information Technology</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="lsi_summary">LSI Summary</label>
+        <input type="text" id="lsi_summary" name="lsi_summary" required placeholder="Short summary">
+      </div>
+      <div class="form-group">
+        <label for="lsi_details">LSI Details</label>
+        <textarea id="lsi_details" name="lsi_details" required placeholder="Detailed description"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
