@@ -1,6 +1,6 @@
 from agents import Agent, Runner, AsyncOpenAI, set_default_openai_client, set_tracing_disabled, set_default_openai_api
 
-gemini_api_key = ""
+gemini_api_key = "AIzaSyA87LFrToljBRLCgFesEJODUN04nXKZsz8"
 set_tracing_disabled(True)
 set_default_openai_api("chat_completions")
 
@@ -12,6 +12,6 @@ set_default_openai_client(external_client)
 
 agent: Agent = Agent(name="Assistant", instructions="You are a helpful assistant", model="gemini-2.0-flash")
 
-result = Runner.run_sync(agent, "bye")
+result = Runner.run_sync(agent, "hello")
 
 print(result.final_output)
