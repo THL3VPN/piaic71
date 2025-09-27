@@ -17,14 +17,14 @@ load_dotenv()
 set_tracing_disabled(disabled=True)
 
 #   1) Environment & Client Setup
-gemini_api_key = "AIzaSyA87LFrToljBRLCgFesEJODUN04nXKZsz8"
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 set_tracing_disabled(True)
 set_default_openai_api("chat_completions")
 
 ##   Initialize the AsyncOpenAI-compatible client with Gemini details
 external_client = AsyncOpenAI(
-    api_key=gemini_api_key,
+    api_key=GEMINI_API_KEY,
     base_url=BASE_URL,
 )
 
