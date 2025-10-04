@@ -46,7 +46,6 @@ def subtract(a: int, b: int) -> int:
 agentic_ai_expert: Agent = Agent(
     name="AgenticAIExpert",
     instructions="You are a Agentic AI expert AI agent",
-    model="gemini-2.5-flash",
     ).as_tool(
         tool_name="AgenticAIExpert",
         tool_description="You are a helpful assistant"
