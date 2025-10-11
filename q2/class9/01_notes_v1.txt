@@ -1,0 +1,48 @@
+"""
+class9 - 10-11-2025 - notes
+
+directions by Sir Zia for Vibe Coding[
+    platform[
+        wsl or linux
+    ]
+    bash
+    ide[
+        Cursor > Paid
+        vsCode > Free
+    ]
+    Git and github
+    specKitPlus
+    AI tools[
+        codex > paid
+        claude code > paid
+        gemini-cli > free but limited tokens
+        qwen > free
+    ]
+    MCP server[
+        context7 server
+    ]
+    Kubernetes Cluster[
+        Azure
+        local Cluster
+    ]
+    Agent developmnet[
+        write manually
+        write using agent kit
+    ]
+]
+
+
+handsoff functionality in class[
+    uv commands[
+        uv init
+        uv venv
+        uv add openai-agents
+    ]
+    temprature[
+        0.1 - 0.3 : factual
+        0.4 - 07 : creative and balanced
+        0.8 - 1 : too creative
+    ]
+
+
+]
