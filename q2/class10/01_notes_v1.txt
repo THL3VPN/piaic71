@@ -1,0 +1,68 @@
+7 pillars of programming[
+    1. programming_language[
+        markdown
+    ]
+    2. developmnet_environmet[
+        linux
+        wsl
+    ]
+    3. ai_cli[
+        gemini
+        codex
+    ]
+    4. mcp[
+        make tools and make it available
+    ]
+    5. tdd[
+        test driven development
+        make test for all the function , 
+        red,green strategy
+    ]
+    6. sdd[
+        specKitPlus driven development 
+    ]
+    7. cloud[
+        Docker : for microservices
+        Kubernetes : for microservices mgmt
+        Dapr : for microservices relation mgmt
+        Rays : make 1 master computer node using small computers as cluster nodes
+    ]
+]
+
+SDD[
+    https://github.com/panaversity/spec-kit-plus/tree/main/docs-plus/01a_ai_cli/01_big_free_tiers
+
+    how to install node[
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+        \. "$HOME/.nvm/nvm.sh"
+        nvm install 22
+        npm -v # Should print "10.9.3".
+        node -v # Should print "v22.19.0"     
+    ]
+
+    general commands[
+        cd /mnt/c   
+    ]    
+
+    how to install gemini[
+        npm install -g @google/gemini-cli
+        gemini -v
+    ]
+
+    how to install uv[
+        
+    ]
+
+    how to install specKitPlus[
+        https://github.com/panaversity/spec-kit-plus/tree/main/
+
+        uv tool install specifyplus
+
+        specifyplus init <PROJECT_NAME>
+        specifyplus check
+    ]
+
+    
+
+
+]
