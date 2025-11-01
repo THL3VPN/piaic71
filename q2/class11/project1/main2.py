@@ -94,6 +94,7 @@ async def main():
 
     print(result4.final_output)  # Expected output: The user John is 47 years old.
     print("*"*20)
+    print(result4.to_input_list())
 
 
 if __name__ == "__main__":
