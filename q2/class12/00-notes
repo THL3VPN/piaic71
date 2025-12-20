@@ -1,0 +1,14 @@
+class12
+learn gemini cli
+task : taskManger[
+    crete a project
+    initalize with uv
+    create a task manager
+    add a login feature
+    create user interface using streamlit
+    mcp[
+        npx -y firebase-tools@latest login --reauth
+        
+    ]
+
+]

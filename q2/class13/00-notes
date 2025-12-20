@@ -1,0 +1,33 @@
+class13
+
+gemini memory[
+    global
+    project
+
+]
+
+finance tracking[
+    https://www.notion.so/Personal-Finance-Tracker-CLI-2aada4c664118005907ce48afdfaba56?source=copy_link
+
+    add all the gemini.md files as the core instructions
+
+    prompt[
+        1. Read all rules.md files and initialize my project and build its structure.
+        2. Add budget features @features/budget/GEMINI.md
+        3. Add inanacial analytics features @features/financial_analytics/GEMINI.md
+    ]
+
+    uv run streamlit run web_dashboard.py
+]
+
+spek-kit plus[
+    https://github.com/panaversity/spec-kit-plus
+
+    uses[
+        1 creates user stories
+        2 makes smaller tasks
+        3 implements 1 story at a time and then makes llm work on it
+    ]
+
+]
+
