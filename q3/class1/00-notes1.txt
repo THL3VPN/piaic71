@@ -1,5 +1,13 @@
-class1
+class1-20-12-2025
 
-stepback and analyze
-log your out logic
-i will give you feedback and based on that make your next move
+tips[
+    in case the AI gets stuck use StepBack[
+        stepback and analyze log your out logic i will give you feedback and based on that make your next move
+    ]
+]
+
+
+presentaiton[
+    https://docs.google.com/presentation/d/1UGvCUk1-O8m5i-aTWQNxzg8EXoKzPa8fgcwfNh8vRjQ/edit?slide=id.g398c4d5deda_2_2#slide=id.g398c4d5deda_2_2
+    
+]
