@@ -2,6 +2,29 @@
 1 notes[
     1.1 claude code is general purpose agent
     1.2 general agent can have extended skills
+
+
+]
+
+claudecode[
+    https://claudecode.io/install
+    https://github.com/musistudio/claude-code-router
+
+    npm install -g @anthropic-ai/claude-code
+    npm install -g @musistudio/claude-code-router
+    ccr ui
+        add provider
+            select gemini and api key
+    ccr start
+    ccr code
+    ccr restart
+    ccr model
+
+    mcp server
+        https://github.com/github/github-mcp-server
+        
+
     
+
 
 ]
