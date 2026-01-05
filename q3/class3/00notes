@@ -1,0 +1,22 @@
+nvidia has bought groq[
+    only the founder , ceo and tech
+    left the company due to law issues
+]
+
+llm[
+    openAI
+    claude opus4.5
+    chinese company[
+
+    ]
+]
+
+mcp server[
+    https://modelcontextprotocol.io/docs/getting-started/intro
+    claude mcp add --transport stdio context7 npx @upstash/context7-mcp
+    claude mcp add --transport http github https://api.githubcopilot.com/mcp -H "Authorization: Bearer YOUR_GITHUB_PAT"
+]
+
+claude[
+    code is the new universal interface
+]
