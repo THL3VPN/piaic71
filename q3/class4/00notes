@@ -1,0 +1,13 @@
+skills[
+    uses current session context window
+    skills are invoded dynamically based on keywords
+]
+
+subagent[
+    has its own context window
+    needs to be invoked manually
+]
+
+hook[
+    invoke anything when the /hook event is triggered
+]
